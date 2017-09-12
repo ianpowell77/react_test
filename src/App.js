@@ -65,7 +65,6 @@ class App extends Component {
 
 
   checkGuess(){
-
     this.setState({
       counter: this.state.counter + 1,
     });
@@ -103,17 +102,20 @@ class App extends Component {
     if (this.state.guess === this.state.randomNumber){
       this.setState({
         message: 'Congratulations, you guessed the number after ' + guesses + ' attempt' + plurality,
-        hint: ''
+        hint: '',
+        guess: ''
       });
     } else if (this.state.guess > this.state.randomNumber) {
       this.setState({
         message: 'Try Again, you have made ' + guesses + ' attempt' + plurality,
         hint: 'Your number was too high',
+        guess: ''
       });
     } else {
       this.setState({
         message: 'Try Again, you have made ' + guesses + ' attempt' + plurality,
-        hint: 'Your number was too low'
+        hint: 'Your number was too low',
+        guess: ''
       });
     };
   };
@@ -130,7 +132,7 @@ class App extends Component {
         </div>
         <Standard start={this.handleStandardClick} />
         <Expert start={this.handleExpertClick} />
-        <input type="text" id="guess" name="guess" onChange={this.getGuess}/>
+        <input className="user-input" type="text" id="guess" name="guess" onChange={this.getGuess} value={this.state.guess}/>
         <input type="submit" value="submit" onClick={this.checkGuess}/>
         <p>{this.state.message}</p>
         <p>{this.state.hint}</p>

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Expert extends Component {
   	render() {
 	    return (
-	    	<button onClick={this.props.start}>Expert</button>
+	    	<button className="expert-btn" onClick={this.props.start}>Expert</button>
 	    );
   	}
 }

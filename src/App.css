@@ -81,10 +81,61 @@ table {
 }
 
 button {
-  margin: 0 325px;
+  margin: 0 315px;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  background: green;
 }
 
 input {
   display: block;
   margin: 10px auto;
 }
+
+.expert-btn {
+  border: none;
+  padding: 7px 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 2px black;
+  background: lightblue;
+}
+
+.standard-btn {
+  border: none;
+  padding: 7px 13px;
+  border-radius: 10px;
+  box-shadow: 0 0 2px black;
+  background: lightgreen;
+}
+
+.user-input {
+  border: none;
+  margin-top: 50px;
+  width: 280px;
+  height: 30px;
+  font-size: 25px;
+  border-radius: 5px;
+  border-bottom: 1px solid #999;
+  box-shadow: 0 0 3px black;
+  text-align: center;
+}
+
+.user-input:focus {
+  outline: 0;
+}
+
+
+
+
+
+
+
